@@ -10,7 +10,6 @@ var me = {
   name: "Tiarra",
   age: "127"
 }
-
 alert(me.name);
 
 //NEXT PROBLEM
@@ -84,11 +83,8 @@ var user2 = {
 //Let's say I, the user, decided to change my name and email address to the following
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
-  user2.name = 'Tyler';
+  user2.name = 'Tyler S. McGinnis';
   user2.email = 'tyler.mcginnis@devmounta.in';
-
-
-
 
 
 // =============================================
@@ -107,7 +103,7 @@ var user2 = {
 
 //Create an empty object called methodCollection.
 
-  //Code Here
+  methodCollection = {};
 
 
 
@@ -118,7 +114,8 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
  which logs 'hello' to the console. 
  */
 
-  //Code Here
+  methodCollection.alertHello = function () {alert("hello")};
+  methodCollection.logHello = function () {console.log("hello");}
 
 
 
@@ -126,13 +123,8 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
 //Now call your alertHello and logHello methods.
 
-  //Code Here
-
-
-
-
-
-
+methodCollection.alertHello();
+methodCollection.logHello();
 
 
 //NEXT PROBLEM
@@ -142,14 +134,14 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 // Create a function called makePerson which takes in name, birthday, ssn as its
 // parameters and returns a new object with all of the information that you passed in.
 
-  //Code Here
+  makePerson = (name, birthday, ssn) => {
+    var person = {};
+    person.name = name;
+    person.birthday = birthday;
+    person.ssn = ssn;
 
-
-
-
-
-  
-
+    return person;
+  }
 
 //NEXT PROBLEM
 
@@ -159,4 +151,12 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
   //Code Here
 
+  makeCard = (cardNumber, expirationDate, securityCode) => {
+    var creditCard = {};
+    creditCard.cardNumber = cardNumber;
+    creditCard.expirationDate = expirationDate;
+    creditCard.securityCode = securityCode;
+
+    return creditCard;
+  }
 
